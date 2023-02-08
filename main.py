@@ -8,8 +8,7 @@ def main():
     st.title("欢迎使用YouTube视频下载器\n"
              "Welcome to YouTube Video Downloader")
 
-    url = st.text_input("输入YouTube上复制的视频地址：\n"
-                        "Enter the URL of the video: ")
+    url = st.text_input("输入YouTube上复制的视频地址\\ Enter the URL of the video: ")
     if url:
         yt = pytube.YouTube(url)
         resolutions = [x.resolution for x in yt.streams.filter(progressive=True) if x.resolution != "144p"]
