@@ -23,11 +23,10 @@ def main():
             if st.button("Copy to Clipboard"):
                 try:
                     pyperclip.copy(video_link)
-                    st.success("视频下载链接已经拷贝在粘贴板，粘贴到浏览器中打开.\n"
-                               " The download URL is copied to the clipboard.")
+                    st.success("视频下载链接已经拷贝在粘贴板，粘贴到浏览器中打开 (The download URL is copied to the clipboard).")
                 except pyperclip.PyperclipException as e:
-                    st.warning("复制视频下载链接，粘贴到浏览器中打开：\n"
-                               " The Pyperclip unsupported，The download URL：\n\n" + video_link)
+                    st.warning("复制视频下载链接，粘贴到浏览器中打开 (The Pyperclip unsupported,"
+                               "The download URL)：\n\n" + video_link)
 
 
 if __name__ == "__main__":
