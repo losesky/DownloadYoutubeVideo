@@ -5,7 +5,7 @@ import pyperclip
 
 def main():
     st.set_page_config(page_title="Youtube Video Downloader", page_icon=":video_camera:", layout="centered")
-    st.title("欢迎使用YouTube视频下载器-Welcome to YouTube Video Downloader")
+    st.title("欢迎使用YouTube视频下载器\n Welcome to YouTube Video Downloader")
 
     url = st.text_input("输入YouTube上复制的视频地址(Enter the URL of the video): ")
     if url:
