@@ -22,8 +22,11 @@ def main():
                 "<video width='100%' controls autoplay><source src='{}' type='video/mp4'>"
                 "Your browser does not support the video tag.</video>".format(video_link), unsafe_allow_html=True)
             if st.button("Copy to Clipboard"):
-                pyperclip.copy(video_link)
-                st.write("The download URL is copied to the clipboard.")
+                try:
+                    pyperclip.copy(video_link)
+                    st.write("The download URL is copied to the clipboard.")
+                except pyperclip.PyperclipException as e:
+                    st.warning("The Pyperclip unsupported，The download URL：\n\n" + video_link)
 
 
 if __name__ == "__main__":
